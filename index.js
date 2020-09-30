@@ -13,12 +13,17 @@ const dbUri = "mongodb+srv://supercode:supercode@cluster0.puw0v.mongodb.net/supe
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => {
-        app.listen(3019, () => {
+        app.listen(process.env.PORT || 3019, () => {
             console.log('listening at 3019');
         })
     })
     .catch(err => console.log(err))
 
+
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
+    console.log('Listening at 5000');
+})
 
 app.get('/', (req, res) => {
     productItems.find()
