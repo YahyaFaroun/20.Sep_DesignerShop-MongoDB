@@ -1,0 +1,36 @@
+<%- include('partials/head.ejs') %>
+
+<body>
+    <%- include('partials/header.ejs') %>
+    <main id="mainAdd">
+        <h1>ADD A NEW PRODUCT</h1>
+        <hr>
+        <form action="/add" method="POST" class="edit">
+            <input type="text" name="product" id="" placeholder="Product name">
+            <input type="url" name="url" id="" placeholder="Url picture">
+            <input type="text" name="company" id="" placeholder="Company">
+            <input type="text" name="price" id="" placeholder="Price">
+            <input type="text" name="shop" id="" placeholder="Link Shop">
+            <input type="submit" value="ADD PRODUCT">
+        </form>
+        <hr>
+        <section class="mainSections">
+            <% randomGallery.forEach(element => { %>
+            <section>
+                <a href="/details/<%= element._id%>"><img src="<%= element.Product_Picture_Link %> " alt=""></a>
+                <article>
+                    <div>
+                        <h6><%=element.Product_Name%></h6>
+                        <p><%= element.Company %></p>
+                    </div>
+                    <h6>$<%= element.Price%></h6>
+                </article>
+            </section>
+            <% }) %>
+        </section>
+
+
+    </main>
+</body>
+
+</html>

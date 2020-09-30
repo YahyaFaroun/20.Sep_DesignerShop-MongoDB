@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+h1{
+    text-align: center;
+    margin-top: 5vh;
+}
+hr{
+    width: 30%;
+    margin: 50px auto;
+}
+h6{
+    color: #323A45;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+p{
+    font-size: 1.2em;
+    color: #848484;
+    font-weight: lighter;
+}
+.hide{
+    display: none;
+}
+header{
+    margin: 0 10%;    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+nav ul li{
+    list-style: none;
+    padding-left: 10px;
+}
+nav a{
+    color: #323A45;
+    text-decoration: none;
+}
+/*Farbe: #323A45 / #848484 */
+
+.mainSections{
+    padding: 7.5vh 10% 5vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+#recommend{ 
+    
+
+}
+.grid:nth-of-type(7n+1){
+    grid-column: 1/-1;
+}
+.article{
+    display: flex;
+    justify-content: space-between;
+}
+.mainSections img{
+    width: 100%;
+    opacity: .6;
+}
+.mainSections img:hover{
+    opacity: 1;
+}
+
+.btn{
+    text-align: center;
+    padding: 10px 30px;
+    width: 150px;
+    border: 1px solid #323A45;
+    color: #323A45;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.btn:hover{
+    color: #fff;
+    background: #323A45;
+}
+
+
+
+.single{
+    padding: 7.5vh 10% 5vh;
+    margin: 0 auto;
+    align-items: center;
+}
+.edit{
+    margin: 0 auto;
+    padding: 7.5vh 10% 5vh;
+    display: flex;
+    flex-direction: column;
+}
+input, textarea{
+    border: none;
+    background: #e5e5e5;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+    text-align: center;
+    padding: 12px 5px;
+    font-size: 1rem;
+    color: #848484;
+}
+textarea{
+    resize: none;
+    height: 100px;
+}
+input:last-of-type{
+    color: #fff;
+    background: #323A45;
+    border: 1px solid #323A45;
+    font-size: 1.2rem;
+    padding: 10px 5px;
+}
+input:last-of-type:hover{
+    background: #fff;
+    color: #323A45;
+    cursor: pointer;
+}
+
+

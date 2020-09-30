@@ -1,0 +1,19 @@
+<%- include('partials/head.ejs') %>
+</body>
+<%- include('partials/header.ejs') %>
+<main class="mainSections">
+    <% items.forEach(element => { %>
+    <section class="grid">
+        <a href="/details/<%= element._id%>"><img src="<%= element.Product_Picture_Link %> " alt=""></a>
+        <article class="article">
+            <div>
+                <h6><%=element.Product_Name%></h6>
+                <p><%= element.Company %></p>
+            </div>
+            <h6>$<%= element.Price%></h6>
+        </article>
+    </section>
+    <% }) %>
+</main>
+
+</html>
