@@ -20,11 +20,6 @@ mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log(err))
 
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => {
-    console.log('Listening at 5000');
-})
-
 app.get('/', (req, res) => {
     productItems.find()
         .then(result => {
